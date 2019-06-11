@@ -33,6 +33,7 @@
 #include <stdint.h>
 #include <assert.h>
 #include <linux/fs.h>
+#include <endian.h>
 
 #include "mmc.h"
 #include "mmc_cmds.h"
