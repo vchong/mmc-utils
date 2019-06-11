@@ -12,13 +12,18 @@
  * License along with this program; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 021110-1307, USA.
+ *
+ * Modified to add field firmware update support,
+ * those modifications are Copyright (c) 2016 SanDisk Corp.
  */
 
 /* mmc_cmds.c */
 int do_read_extcsd(int nargs, char **argv);
 int do_write_extcsd(int nargs, char **argv);
-int do_writeprotect_get(int nargs, char **argv);
-int do_writeprotect_set(int nargs, char **argv);
+int do_writeprotect_boot_get(int nargs, char **argv);
+int do_writeprotect_boot_set(int nargs, char **argv);
+int do_writeprotect_user_get(int nargs, char **argv);
+int do_writeprotect_user_set(int nargs, char **argv);
 int do_disable_512B_emulation(int nargs, char **argv);
 int do_write_boot_en(int nargs, char **argv);
 int do_boot_bus_conditions_set(int nargs, char **argv);
@@ -36,3 +41,7 @@ int do_rpmb_read_block(int nargs, char **argv);
 int do_rpmb_write_block(int nargs, char **argv);
 int do_cache_en(int nargs, char **argv);
 int do_cache_dis(int nargs, char **argv);
+int do_ffu(int nargs, char **argv);
+int do_read_scr(int argc, char **argv);
+int do_read_cid(int argc, char **argv);
+int do_read_csd(int argc, char **argv);
